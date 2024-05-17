@@ -1,0 +1,41 @@
+.home{
+    padding-top: 3rem;
+    background-color: #040404a9;   
+    }
+
+    footer {
+        border-top: 5px solid #ff0000; /* Garis putih dengan ketebalan 5px */
+        width: 100%; /* Lebar 100% */
+        margin-top: 50px; /* Margin atas 50px */
+        padding-top: 20px; /* Padding atas 20px */
+        padding-bottom: 20px; /* Padding bawah 20px */
+    }
+    
+    .btn {
+        font-family:  'Bauhaus 93', sans-serif; 
+        color: #000000;
+    }
+
+    .btn:hover {
+        background-color: #300404;
+    }
+    
+    .card-body {
+        font-family:'Bauhaus 93', sans-serif; 
+    }
+
+    button {
+        padding: auto;
+        background-color: rgb(255, 0, 0);
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Bauhaus 93', sans-serif; 
+      }
+      
+      button:hover {
+        background-color: #300404;
+      }
+
+      
