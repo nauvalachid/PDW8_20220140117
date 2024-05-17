@@ -31,14 +31,30 @@ function formatTime(date) {
     return hour + ':' + minute + ':' + second;
 }
 
-document.getElementById('orderForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+$(document).ready(function() {
+    $('#orderForm').on('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
 
-    Swal.fire({
-        title: '⇛OrDeR SuBmItTeD!⇚',
-        text: '𝖳𝗁𝖺𝗇𝗄 𝗒𝗈𝗎 𝖿𝗈𝗋 𝗒𝗈𝗎𝗋 𝗈𝗋𝖽𝖾𝗋.',
-        icon: 'success',
-        confirmButtonText: 'OK',
-        confirmButtonColor: '#d33',
+        // Get form values
+        const name = $('#name').val();
+        const email = $('#email').val();
+        const gender = $('input[name="Gender"]:checked').val();
+        let jerseys = [];
+        $('input[name="Jersey"]:checked').each(function() {
+            jerseys.push($(this).val());
+        });
+
+        // Display the SweetAlert
+        Swal.fire({
+            title: 'Order Confirmation',
+            html: `
+                <p>Name: ${name}</p>
+                <p>Email: ${email}</p>
+                <p>Gender: ${gender}</p>
+                <p>Jersey: ${jerseys.join(', ')}</p>
+            `,
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
     });
 });
