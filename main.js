@@ -46,12 +46,12 @@ $(document).ready(function() {
 
         // Display the SweetAlert
         Swal.fire({
-            title: 'Order Confirmation',
+            title: '⇛OrDer CoNfIrMaTiOn⇚',
             html: `
-                <p>Name: ${name}</p>
-                <p>Email: ${email}</p>
-                <p>Gender: ${gender}</p>
-                <p>Jersey: ${jerseys.join(', ')}</p>
+                <p>𝔑𝔞𝔪𝔢: ${name}</p>
+                <p>𝔈𝔪𝔞𝔦𝔩: ${email}</p>
+                <p>𝔊𝔢𝔫𝔡𝔢𝔯: ${gender}</p>
+                <p>𝔍𝔢𝔯𝔰𝔢𝔶: ${jerseys.join(', ')}</p>
             `,
             icon: 'success',
             confirmButtonText: 'OK'
